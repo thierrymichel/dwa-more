@@ -1,0 +1,48 @@
+.more {
+  position: relative;
+  display: block;
+  margin: 6rem auto;
+  border: 0;
+  padding: 2rem 5rem 2rem 3rem;
+  background-color: $c-dark;
+  color: $c-text;
+  font-family: $ff-default;
+  transition:
+    background-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 0.3rem);
+    right: 2rem;
+    display: block;
+    width: 1.4rem;
+    height: 0.4rem;
+    background-color: $c-text;
+    transition: background-color 0.35s ease-in-out;
+  }
+
+  &::after {
+    content: '';
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    background-color: lighten($c-dark, 30%);
+  }
+
+  &:disabled {
+    background-color: lighten($c-dark, 50%);
+    color: lighten($c-text, 10%);
+    // cursor: wait;
+    cursor: not-allowed;
+
+    &::before,
+    &::after {
+      background-color: lighten($c-text, 10%);
+    }
+  }
+}

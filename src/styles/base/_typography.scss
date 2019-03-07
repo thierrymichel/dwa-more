@@ -1,0 +1,28 @@
+// Import fonts
+
+@font-face {
+  font-family: 'redacted';
+  src: url('./../assets/fonts/redacted-regular.woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  font-size: calc(1em * 0.625);
+}
+
+body {
+  /* sass-lint:disable-block no-vendor-prefixes */
+  font: 1.4rem / 1.6 $ff-default;
+  // font: 1.4rem / 1.6 $ff-debug;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  line-height: 1.5;
+}

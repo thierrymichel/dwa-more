@@ -1,0 +1,25 @@
+.post,
+[class*='post--'] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+.post__content,
+.post__picture {
+  flex-basis: calc(50% - 3rem);
+}
+
+.post__content {
+  @include owl(2rem);
+}
+
+.post__picture {
+  min-height: 18rem;
+  background: url('../assets/images/picture-light.png') no-repeat center center $c-gray;
+  background-size: 12rem auto;
+}
