@@ -12,6 +12,18 @@ let mix = require('laravel-mix');
  */
 
 mix
+  .webpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(njk|nunjucks)$/,
+          use: [
+            { loader: 'nunjucks-loader' }
+          ]
+        }
+      ]
+    }
+  })
   .copy('src/**/*.html', 'dist/')
   .copy('src/assets/', 'dist/assets/')
   .js('src/scripts/app.js', 'dist/scripts/')

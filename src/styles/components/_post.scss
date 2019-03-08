@@ -2,6 +2,7 @@
 [class*='post--'] {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   margin-bottom: 8rem;
 
   &:nth-child(odd) {
